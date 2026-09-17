@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Навигационная панель -->
+    <aside class="sidebar">
+      <h2><i class="fa-solid fa-bolt"></i> Smart Control</h2>
+      <nav>
+        <a href="#" class="active"><i class="fa-solid fa-house"></i> Главная</a>
+        <a href="#"><i class="fa-solid fa-shield-halved"></i> Безопасность</a>
+        <a href="#"><i class="fa-solid fa-temperature-half"></i> Климат</a>
+        <a href="#"><i class="fa-solid fa-gear"></i> Настройки</a>
+      </nav>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+      <header>
+        <h1>Управление домом</h1>
+        <div class="status-badge"><span class="dot"></span> Система активна</div>
+      </header>
+
+      <!-- Карточки с показателями -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <i class="fa-solid fa-temperature-high icon"></i>
+          <div>
+            <h3>Температура</h3>
+            <p id="tempValue">22°C</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-droplet icon"></i>
+          <div>
+            <h3>Влажность</h3>
+            <p>45%</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-shield-halved icon"></i>
+          <div>
+            <h3>СКУД / Замок</h3>
+            <p id="lockStatus">Заблокирован</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Интерактивные переключатели -->
+      <h2>Устройства</h2>
+      <section class="controls-grid">
+        <div class="control-card">
+          <div class="card-info">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>Основной свет</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="lightToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="control-card">
+          <div class="card-info">
+            <i class="fa-solid fa-fan"></i>
+            <span>Кондиционер</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="acToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="control-card">
+          <div class="card-info">
+            <i class="fa-solid fa-lock"></i>
+            <span>Умный замок</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="lockToggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
